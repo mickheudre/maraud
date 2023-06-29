@@ -39,6 +39,33 @@ export const Skavens : Crew = {
             size: 3,
             special: "+ 1 aux dégâts, +1D au combat"
         },
-       
-    ]
+        
+    ],
+    grimoire: {
+        name: "Toximancie",
+        spells: [
+            {
+                name: "Nuage Toxique",
+                when: "Phase de plan après initiative",
+                duration: "1 tour",
+                range: "15cm",
+                effect: "Placer un socle de 25mm à portée. Toutes figurines (à part les petits rats) à 5cm du socle ont une Taille -1 pour le mouvement et le combat"
+            },
+            {
+                name: "Nuage Sombre",
+                when: "Action de décor",
+                duration: "1 tour",
+                range: "15cm",
+                effect: "lacer un socle de 25mm à portée. Aucune figurine à 5cm du socle n'a de ligne de vue. Les skavens gagnent automatiquement la capacité Sournois sans avoir besoin du surnombre sur les figurines à 5cm du socle."
+            },
+            {
+                name: "Nuage Frénétique",
+                when: "Début de phase de combat ",
+                duration: "1 tour",
+                range: "15cm",
+                effect: "Placer un socle de 25mm à portée. Toutes figurines à 5cm du socle ont +1D pour le combat."
+            }
+            
+        ]
+    }
 }

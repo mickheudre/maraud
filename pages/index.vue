@@ -1,10 +1,12 @@
 <template>
-    <div class="w-screen h-screen flex flex-col justify-center items-center">
-      
-      <CrewCard v-bind="selectedCrew"/>
-      <div class="fixed sm:static sm:flex bottom-0"> 
-        <button @click="selectedCrew = Skavens">Skavens</button>
-        <button @click="selectedCrew = Gobelins">Gobelins</button>
+    <div class="w-screen h-screen flex flex-col sm:justify-center items-center">
+      <div class="flex overflow-scroll snap-x snap-mandatory">
+        <CrewCard v-bind="selectedCrew"/>
+        <MagicCard v-bind="selectedCrew.grimoire"/>
+      </div>
+      <div class="fixed sm:static sm:flex bottom-0 my-4"> 
+        <button class="rounded-full px-4 py-1 border-black border-2 mx-4" :class="selectedCrew.name == 'Skavens' ? 'bg-black text-white' : ''" @click="selectedCrew = Skavens">Skavens</button>
+        <button class="rounded-full px-4 py-1 border-black border-2 mx-4" :class="selectedCrew.name == 'Gobelins' ? 'bg-black text-white' : ''" @click="selectedCrew = Gobelins">Gobelins</button>
       </div>
     </div>
 </template>

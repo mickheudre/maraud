@@ -35,5 +35,32 @@ export const Gobelins : Crew = {
             special: "+ 1 aux dégâts, force l'adversaire de relancer 1 dé réussi "
         },
        
-    ]
+    ],
+    grimoire: {
+        name: "Potageomancie",
+        spells: [
+            {
+                name: "Navet explosif",
+                when: "Action de décor",
+                duration: "Instantanée",
+                range: "15cm",
+                effect: "Fait apparaître un légume géant (socle de 30mm)"
+            },
+            {
+                name: "Champignon Magique",
+                when: "Action de décor",
+                duration: "1 tour",
+                range: "15cm",
+                effect: "Augmente de 1 la Taille d'une figurine pour le mouvement et le combat."
+            },
+            {
+                name: "Dans les choux...",
+                when: "Action de décor",
+                duration: "1 tour",
+                range: "15cm",
+                effect: "La figurine ciblée ne peut pas faire d'actions de décor. "
+            }
+
+        ]
+    }
 }
