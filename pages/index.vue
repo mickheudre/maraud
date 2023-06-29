@@ -5,8 +5,8 @@
         <MagicCard v-bind="selectedCrew.grimoire"/>
       </div>
       <div class="fixed sm:static sm:flex bottom-0 my-4"> 
-        <button class="rounded-full px-4 py-1 border-black border-2 mx-4" :class="selectedCrew.name == 'Skavens' ? 'bg-black text-white' : ''" @click="selectedCrew = Skavens">Skavens</button>
-        <button class="rounded-full px-4 py-1 border-black border-2 mx-4" :class="selectedCrew.name == 'Gobelins' ? 'bg-black text-white' : ''" @click="selectedCrew = Gobelins">Gobelins</button>
+        <button class="rounded-full px-4 py-1 border-black border-2 mx-4" :class="selectedCrew.name == 'Skavens' ? 'bg-black text-white' : 'bg-white text-black'" @click="selectedCrew = Skavens">Skavens</button>
+        <button class="rounded-full px-4 py-1 border-black border-2 mx-4" :class="selectedCrew.name == 'Gobelins' ? 'bg-black text-white' : 'bg-white text-black'" @click="selectedCrew = Gobelins">Gobelins</button>
       </div>
     </div>
 </template>
