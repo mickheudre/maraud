@@ -20,7 +20,12 @@ export const Gobelins : Crew = {
             special: "Agile : + 5cm de mouvement"
         },
         {
-            name: "Masse & Hache à 2 mains",
+            name: "Masse",
+            size: 1,
+            special: " + 1 aux dégâts"
+        },
+        {
+            name: "Hache à 2 mains",
             size: 1,
             special: " + 1 aux dégâts"
         },
