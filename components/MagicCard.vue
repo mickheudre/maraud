@@ -1,7 +1,7 @@
 <template>
     <div class="max-w-full sm:max-w-md shrink-0 h-fit snap-center">
         <div class="m-4 border-black border-8 grid grid-cols-4 p-6 gap-y-2 gap-x-2 rounded-lg snap-center">
-        <div class="text-2xl col-span-full my-2">{{  name }}</div>
+        <div class="text-2xl font-bold col-span-3 my-2">{{  name }}</div>
         <template  v-for="profile in spells">
             <div class="col-span-full font-bold">{{ profile.name }}</div>
             <div class="col-span-2"> {{ profile.when}}</div>

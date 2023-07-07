@@ -56,7 +56,7 @@ export const Skavens : Crew = {
                 when: "Action de décor",
                 duration: "1 tour",
                 range: "15cm",
-                effect: "lacer un socle de 25mm à portée. Aucune figurine à 5cm du socle n'a de ligne de vue. Les skavens gagnent automatiquement la capacité Sournois sans avoir besoin du surnombre sur les figurines à 5cm du socle."
+                effect: "Placer un socle de 25mm à portée. Aucune figurine à 5cm du socle n'a de ligne de vue. Les skavens gagnent automatiquement la capacité Sournois sans avoir besoin du surnombre sur les figurines à 5cm du socle."
             },
             {
                 name: "Nuage Frénétique",

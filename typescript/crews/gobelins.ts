@@ -2,7 +2,7 @@ import Crew from "../crew"
 
 export const Gobelins : Crew = {
     name: "Gobelins",
-    special: "Armure: Pour chaque touche adverse, le joueur peut relancer un dé.",
+    special: "Armure: Lors d'un combat, si l'adversaire obtient au moins un succés, le joueur peut relancer un dé.",
     profiles: [
         {
             name: "Tromblon",
@@ -30,7 +30,12 @@ export const Gobelins : Crew = {
             special: " + 1 aux dégâts"
         },
         {
-            name: "Magicien",
+            name: "Paire de haches",
+            size: 1,
+            special: " + 1D au combat"
+        },
+        {
+            name: "Shaman",
             size: 1,
             special: "Magicien, +1D au combat"
         },
