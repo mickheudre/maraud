@@ -1,12 +1,16 @@
 <template>
     <div class="w-screen h-screen flex flex-col sm:justify-center items-center">
-      <div class="flex overflow-scroll snap-x snap-mandatory">
-        <CrewCard id="crew" v-bind="selectedCrew" @click="showMagic"/>
-        <MagicCard id="magic" v-bind="selectedCrew.grimoire"/>
+      <div class="flex max-w-full sm:max-w-md  overflow-scroll  snap-x snap-mandatory">
+        <template v-for="crew in crews">
+        <CrewCard :id="`${crew.name}-crew`" v-bind="crew" @click="showMagic(crew.name)"/>
+        <MagicCard :id="`${crew.name}-magic`" v-bind="crew.grimoire"/>
+      </template>
       </div>
       <div class="fixed sm:static sm:flex bottom-0 my-4"> 
-        <button class="rounded-full px-4 py-1 border-black border-2 mx-4" :class="selectedCrew.name == 'Skavens' ? 'bg-black text-white' : 'bg-white text-black'" @click="selectedCrew = Skavens">Skavens</button>
-        <button class="rounded-full px-4 py-1 border-black border-2 mx-4" :class="selectedCrew.name == 'Gobelins' ? 'bg-black text-white' : 'bg-white text-black'" @click="selectedCrew = Gobelins">Gobelins</button>
+        <button class="rounded-full px-4 py-1 border-black border-2 mx-4" :class="selectedCrew.name == 'Skavens' ? 'bg-black text-white' : 'bg-white text-black'" @click="showCrew('Skavens')">Skavens</button>
+        <button class="rounded-full px-4 py-1 border-black border-2 mx-4" :class="selectedCrew.name == 'Gobelins' ? 'bg-black text-white' : 'bg-white text-black'" @click="showCrew('Gobelins')">Gobelins</button>
+        <button class="rounded-full px-4 py-1 border-black border-2 mx-4" :class="selectedCrew.name == 'Gobelins' ? 'bg-black text-white' : 'bg-white text-black'" @click="selectedCrew = Gobelins">Aides de jeu</button>
+
       </div>
     </div>
 </template>
@@ -17,7 +21,11 @@ import { Gobelins } from "~/typescript/crews/gobelins"
 
 const selectedCrew = ref(Skavens)
 
-const showMagic = () => {
-  document.getElementById("magic").scrollIntoView()
+const crews = ref([ Skavens, Gobelins])
+const showMagic = (crewName) => {
+  document.getElementById(`${crewName}-magic`).scrollIntoView({ behavior: 'smooth', block: 'center' })
+}
+const showCrew = (crewName) => {
+  document.getElementById(`${crewName}-crew`).scrollIntoView({ behavior: 'smooth', block: 'center' })
 }
 </script>
