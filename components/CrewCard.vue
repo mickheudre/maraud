@@ -8,8 +8,9 @@
         <template  v-for="profile in profiles">
             <div class="col-span-3 flex">
                 <div class="w-6 h-6 text-sm  bg-black text-white rounded-full flex items-center justify-center mx-2 flex-none"><span class="">{{ profile.size }}</span></div>
-                <div class="font-semibold text-sm">{{ profile.name }}</div>
+                <div class="font-semibold tex-sm">{{ profile.name }}</div>
             </div>
+            <div class="col-span-4 text-sm">{{ profile.special }}</div>
         </template >
     </div>
     </div>
