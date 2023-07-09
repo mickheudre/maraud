@@ -6,9 +6,10 @@
 
         <div class="col-span-full mb-4 -mx-4 border-2 px-4 py-2  border-black text-sm"><span class="font-semibold">{{  special.split(':')[0]}} :</span>{{  special.split(':')[1]}}</div>
         <template  v-for="profile in profiles">
-            <div class="col-span-1 w-6 h-6 text-sm  bg-black text-white rounded-full flex items-center justify-center"><span class="">{{ profile.size }}</span></div>
-            <div class="col-span-2 font-semibold tex">{{ profile.name }}</div>
-            <div class="col-span-4 text-sm">{{ profile.special }}</div>
+            <div class="col-span-3 flex">
+                <div class="w-6 h-6 text-sm  bg-black text-white rounded-full flex items-center justify-center mx-2 flex-none"><span class="">{{ profile.size }}</span></div>
+                <div class="font-semibold text-sm">{{ profile.name }}</div>
+            </div>
         </template >
     </div>
     </div>
@@ -28,3 +29,4 @@ export  interface Crew {
 const props = defineProps<Crew>()
 
 </script>
+
