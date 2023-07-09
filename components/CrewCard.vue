@@ -1,6 +1,6 @@
 <template>
         <div class="max-w-full sm:max-w-md shrink-0 h-fit snap-center">
-        <div class="m-4 border-black border-8 grid grid-cols-7 p-6 gap-y-6 gap-x-2 rounded-lg snap-center">
+        <div class="m-4 border-black border-8 grid grid-cols-7 p-6 gap-y-6 gap-x-4 sm:gap-x-2 rounded-lg snap-center">
         <div class="text-2xl font-bold col-span-5">{{ name }}</div>
         <div class="col-span-2 place-self-end" @click="$emit('click')">Magie →</div>
 
