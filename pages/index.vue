@@ -13,7 +13,7 @@
       <button class="rounded-full px-4 py-1 border-black border-2 mx-1" :class="isSelected(2) ? 'bg-black text-white' : 'bg-white text-black'" @click="showCrew('Gobelins')">Gobelins</button>
       <button class="rounded-full h-4 w-4 border-black border-2 mx-1" :class="isSelected(3) ? 'bg-black text-white' : 'bg-white text-black'" @click="showMagic('Gobelins')"></button>
 
-      <button class="rounded-full px-4 py-1 border-black border-2 mx-1" ::class="isSelected(4) ? 'bg-black text-white' : 'bg-white text-black'" @click="navigateTo('scenery')">Aides de jeu</button>
+      <button class="rounded-full px-4 py-1 border-black border-2 mx-1" ::class="isSelected(4) ? 'bg-black text-white' : 'bg-white text-black'" @click="navigateTo('scenery')">Décors</button>
       
     </div>
   </div>
